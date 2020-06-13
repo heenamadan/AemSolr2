@@ -1,0 +1,71 @@
+#include<stdio.h>
+#include<algorithm>
+#include<vector>
+#include<iostream>
+
+int main(int argc, char *a[])
+{
+
+	int t;
+
+	std::cin>>t;
+	for(int i=0;i<t;i++){
+
+		int N;
+		std::vector<int> Players;
+		std::vector<int> Opponents;
+
+		std::cin>>N;
+
+		for(int i=0;i<N;i++){
+			int input;
+
+			std::cin>>input;
+			Players.push_back(input);
+		}
+		for(int i=0;i<N;i++){
+			int input;
+
+			std::cin>>input;
+			Opponents.push_back(input);
+		}
+
+
+		std::sort(Players.begin(),Players.end());
+		std::sort(Opponents.begin(),Opponents.end());
+
+		int win_count=0;
+
+
+		for(int i=0;i<N;i++){
+			int min=0;
+			int index=-1;
+
+			for(int j=0;j<Players.size();j++){
+
+				// first check if player can defeat opponent
+				if(Players[j]>Opponents[i]){
+
+
+					if(min==0){
+						min=Players[j];
+						index=j;
+					}
+
+					else if(Players[j]<min){
+						min=Players[j];
+						index=j;
+					}
+				}
+
+			}
+			if(min!=0){
+				Players.erase(Players.begin()+index);
+				win_count+=1;
+			}
+		}
+
+		std::cout<<win_count<<"\n";
+	}
+
+}

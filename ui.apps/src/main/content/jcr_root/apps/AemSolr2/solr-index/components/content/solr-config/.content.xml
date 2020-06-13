@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Solr Index Creation"
+        sling:resourceType="granite/ui/components/shell/page"
+        consoleId="solr-config">
+        <head jcr:primaryType="nt:unstructured">
+            <clientlibs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/includeclientlibs"
+                categories="[granite.ui.coral.foundation,solr.base]"/>
+        </head>
+        <title
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Solr Index Creation"
+            sling:resourceType="granite/ui/components/shell/title"/>
+        <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container"
+            margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+                <columns
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                    margin="{Boolean}true">
+                    <items jcr:primaryType="nt:unstructured">
+                        <column
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                            <items jcr:primaryType="nt:unstructured">
+                                <container
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    margin="{Boolean}true">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <heading
+                                            granite:class="coral-Heading coral-Heading--2"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                            level="{Long}2"
+                                            text="Create/Delete Index"/>
+                                        <well
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/well"
+                                            margin="{Boolean}true">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <container
+                                                    granite:id="myForm"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form"
+                                                    foundationForm="{Boolean}true"
+                                                    loadingMask="{Boolean}true"
+                                                    margin="{Boolean}true"
+                                                    maximized="{Boolean}true"
+                                                    style="vertical">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <heading
+                                                            granite:class="coral-Heading coral-Heading--2"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                            level="{Long}2"
+                                                            text="Index Pages"/>
+                                                        <gtmContainerId
+                                                            granite:id="indexType"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Index Pages"
+                                                            name="./gtmContainerId"
+                                                            required="{Boolean}true"
+                                                            value="indexpages"/>
+                                                        <submitButton
+                                                            granite:id="btnSubmit"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/button"
+                                                            text="Index Pages"
+                                                            type="submit"/>
+                                                    </items>
+                                                </container>
+                                                <container1
+                                                    granite:id="myDeleteForm"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form"
+                                                    foundationForm="{Boolean}true"
+                                                    loadingMask="{Boolean}true"
+                                                    margin="{Boolean}true"
+                                                    maximized="{Boolean}true"
+                                                    style="vertical">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <heading
+                                                            granite:class="coral-Heading coral-Heading--2"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                            level="{Long}2"
+                                                            text="Delete Pages"/>
+                                                        <submitButton
+                                                            granite:id="btnDSubmit"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/button"
+                                                            text="Delete Pages"
+                                                            type="submit"/>
+                                                    </items>
+                                                </container1>
+                                            </items>
+                                        </well>
+                                    </items>
+                                </container>
+                            </items>
+                        </column>
+                    </items>
+                </columns>
+            </items>
+        </content>
+    </jcr:content>
+</jcr:root>
